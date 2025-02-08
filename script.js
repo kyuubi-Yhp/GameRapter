@@ -10,12 +10,12 @@ document.addEventListener('touchstart', function(event) {
 });
 
 function jump() {
-if (dino.classList != 'jump') {
-  dino.classList.add('jump')
-} 
-setTimeout(function(){
-dino.classList.remove('jump')
-}, 500)
+  if (!dino.classList.contains('jump')) {
+    dino.classList.add('jump');
+  } 
+  setTimeout(function() {
+    dino.classList.remove('jump');
+  }, 500);
 }
 
 let isAlive = setInterval (function() {
@@ -30,11 +30,3 @@ let isAlive = setInterval (function() {
 
 
 
-// function jump() {
-//   if (!dino.classList.contains('jump')) {
-//     dino.classList.add('jump');
-//   } 
-//   setTimeout(function() {
-//     dino.classList.remove('jump');
-//   }, 500);
-// }
